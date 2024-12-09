@@ -5,17 +5,12 @@ import Header from "../components/Header";
 export default function RecruiterPage() {
     return (
         <><Header />
-        <div style={{ padding: '20px' }}>
-            <h1>Recruteur</h1>
-            <div style={{ display: 'flex', gap: '20px' }}>
-                <div>
-                <h2>Liste des Candidats</h2>
+        <div style={{ display: 'flex', gap: '20px', padding: '20px' }}>
+            <div style={{ flex: 1 }}>
                 <CandidateList />
-                </div>
-                <div>
-                <h2>Détails du Candidat</h2>
+            </div>
+            <div style={{ flex: 1 }}>
                 <CandidateDetails />
-                </div>
             </div>
         </div>
         </>

@@ -1,22 +1,28 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
+// import { persistStore, persistReducer } from 'redux-persist';
+// import storage from 'redux-persist/lib/storage';
 
 const candidatesSlice = createSlice({
-  name: 'candidates',
-  initialState: {
-    list: [
-      { id: 1, name: 'John Doe', email: 'john@example.com' },
-      { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
-    ],
-    selectedCandidateId: null, // L'ID du candidat sélectionné
-  },
-  reducers: {
-    selectCandidate: (state, action) => {
-      state.selectedCandidateId = action.payload;
+    name: 'candidates',
+    initialState: {
+      list: [], // Liste des candidats
+      selectedCandidateId: null, // ID du candidat sélectionné
     },
-  },
-});
-
-export const { selectCandidate } = candidatesSlice.actions;
+    reducers: {
+        addCandidate: (state, action) => {
+            const newCandidate = {
+                id: state.list.length + 1,
+                ...action.payload,
+            };
+            console.log('Adding candidate:', newCandidate); // Vérification de l'ajout du candidat
+            state.list.push(newCandidate);
+        },
+    },
+  });
+  
+  // Exporter les actions
+  export const { addCandidate, selectCandidate, updateCandidate } = candidatesSlice.actions;
+  
 
 const store = configureStore({
   reducer: {

@@ -3,19 +3,29 @@
  ***/
 
 "use client";
-
 import { useSelector } from 'react-redux';
 
-const candidate = { id: 1, name: 'John Doe', email: 'john@example.com', resume: 'resume.pdf' };
-
 const CandidateDetails = () => {
-  return (
-    <div>
-      <h1>{candidate.name}</h1>
-      <p>Email: {candidate.email}</p>
-      <p>Resume: {candidate.resume}</p>
-    </div>
-  );
+    // Récupérer l'ID du candidat sélectionné
+    const selectedCandidateId = useSelector((state) => state.candidates.selectedCandidateId);
+    // Trouver le candidat sélectionné dans la liste
+    const candidate = useSelector((state) =>
+        state.candidates.list.find((c) => c.id === selectedCandidateId)
+    );
+
+    // Si aucun candidat n'est sélectionné
+    if (!candidate) {
+        return <p>Aucun candidat sélectionné. Veuillez en sélectionner un dans la liste.</p>;
+    }
+
+    return (
+        <div>
+            <h2>Détails du Candidat</h2>
+            <p>Nom : {candidate.name}</p>
+            <p>Email : {candidate.email}</p>
+            {/* Ajoutez d'autres détails si nécessaire */}
+        </div>
+    );
 };
 
 export default CandidateDetails;

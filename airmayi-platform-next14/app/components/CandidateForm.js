@@ -6,16 +6,10 @@
 import React from 'react';
 import { Button, Select, Form, Input, Upload } from 'antd';
 import { InboxOutlined } from '@ant-design/icons';
+import { useDispatch } from 'react-redux';
+import { addCandidate } from '@/redux/store';
 
 const { Option } = Select;
-
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
-
-const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-};
 
 const normFile = (e) => {
     console.log('Upload event:', e);
@@ -39,6 +33,18 @@ const CandidateForm = () => {
           </Select>
         </Form.Item>
     );
+
+    const dispatch = useDispatch(); // Initialiser useDispatch
+
+    const onFinish = (values) => {
+        // Dispatch l'action pour ajouter le candidat au store
+        dispatch(addCandidate(values)); 
+        console.log('Success:', values);
+    };
+
+    const onFinishFailed = (errorInfo) => {
+        console.log('Failed:', errorInfo);
+    };
 
     return (
         <div className="form-container">
