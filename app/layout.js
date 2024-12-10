@@ -1,5 +1,7 @@
 "use client";
+
 import "./globals.css";
+import { NextIntlProvider } from 'next-intl';
 import { Provider } from 'react-redux';
 import store from "@/redux/store";
 

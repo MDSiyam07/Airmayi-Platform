@@ -72,7 +72,7 @@ const CandidateForm = () => {
                 span: 16,
                 }}
                 style={{
-                maxWidth: 600,
+                width: 900,
                 }}
                 initialValues={{
                 remember: true,
@@ -83,7 +83,7 @@ const CandidateForm = () => {
             >
             
             <Form.Item
-                label="First Name"
+                label="Prénom"
                 name="Input"
                 rules={[
                 {
@@ -96,7 +96,7 @@ const CandidateForm = () => {
             </Form.Item>
 
             <Form.Item
-                label="Name"
+                label="Nom"
                 name="name"
                 rules={[
                 {
@@ -109,8 +109,8 @@ const CandidateForm = () => {
             </Form.Item>
 
             <Form.Item
+                label="Genre"
                 name="gender"
-                label="Gender"
                 rules={[
                 {
                     required: true,
@@ -126,24 +126,25 @@ const CandidateForm = () => {
             </Form.Item>
 
             <Form.Item
-                name="email"
                 label="Email"
+                name="email"
                 rules={[
-                    {
+                {
+                    required: true,
                     type: 'email',
-                    },
+                },
                 ]}
                 >
                 <Input />
             </Form.Item>
 
             <Form.Item
-                label="Phone Number"
+                label="N° tél"
                 name="phone"
                 rules={[
                 {
                     required: true,
-                    message: 'Please input your phone number!',
+                    message: 'Veuillez importer votre tél!',
                 },
                 ]}
             >
@@ -155,19 +156,25 @@ const CandidateForm = () => {
                 />
             </Form.Item>
 
-            <Form.Item label="My Resume">
-                <Form.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} noStyle>
+            <Form.Item label="Mon CV">
+                <Form.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} 
+                rules={[
+                {
+                    required: true,
+                    message: 'Veuillez importer votre CV!',
+                },
+                ]} noStyle>
                     <Upload.Dragger name="files" action="/upload.do">
                     <p className="ant-upload-drag-icon">
                         <InboxOutlined />
                     </p>
-                    <p className="ant-upload-text">Click or drag file to this area to upload</p>
+                    <p className="ant-upload-text">Cliquez ou faites glisser un fichier dans cette zone pour le téléverser.</p>
                     </Upload.Dragger>
                 </Form.Item>
             </Form.Item>
 
             <Form.Item
-                label="Text Motivation"
+                label="Texte de Motivation"
                 name="TextArea"
                 rules={[
                 {
@@ -181,7 +188,7 @@ const CandidateForm = () => {
 
             <Form.Item label={null} className="form-button">
                 <Button type="primary" htmlType="submit">
-                    Send my application!
+                    Envoyer ma candidature!
                 </Button>
             </Form.Item>
 

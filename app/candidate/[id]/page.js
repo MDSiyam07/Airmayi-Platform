@@ -3,6 +3,7 @@
 import { useSelector } from 'react-redux';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import Link from 'next/link';
 
 const CandidateDetailsPage = ({ params }) => {
     const { id } = params;
@@ -36,6 +37,9 @@ const CandidateDetailsPage = ({ params }) => {
             </p>
             )}
         </div>
+            <Link href="/recruiter">
+                    <p style={{ color: 'blue', textDecoration: 'underline' }}>Retour à la liste des candidats</p>
+            </Link>
         <Footer /></>
     );
 };
