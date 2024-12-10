@@ -1,22 +1,36 @@
-import Link from 'next/link';
+"use client";
 
-const ThankYouPage = () => {
+import { useSelector } from "react-redux";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Link from "next/link";
+import CandidateList from "../components/CandidateList";
+
+const RecruiterPage = () => {
+    const candidates = useSelector((state) => state.candidates.list);
+
     return (
-        <div style={{ display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '100vh',
-                    margin: 0,
-                    textAlign: 'center',
-                    flexDirection: 'column', 
-                }}>
-            <h1>Merci pour votre candidature !</h1>
-            <p>Nous avons bien reçu vos informations. Nous vous contacterons bientôt. &#128522;</p>
-            <Link href="/">
-                <p style={{ color: 'blue', textDecoration: 'underline' }}>Retour à l'accueil</p>
-            </Link>
-        </div>
+        <><Header />
+            <div className="recruiter-page-container">
+                <p className="form-title">Liste des candidats</p>
+                {candidates.length > 0 ? (
+                    <div>
+                <p className="info-message" style={{ fontStyle: 'italic', margin: '10px 0' }}>
+                    Sélectionnez un candidat pour voir ses informations.
+                </p>
+                        <CandidateList />
+                    </div>
+                ) : (
+                    <p className="no-candidates-message">
+                        Veuillez soumettre une candidature via le formulaire candidat pour voir la liste.
+                        <Link href="/candidate">
+                                <p style={{ color: 'blue', textDecoration: 'underline' }}>Accès au formulaire candidat</p>
+                        </Link>
+                    </p>
+                )}
+            </div>
+        <Footer /></>
     );
 };
 
-export default ThankYouPage;
+export default RecruiterPage;
