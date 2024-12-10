@@ -17,6 +17,10 @@ const candidatesSlice = createSlice({
             console.log('Adding candidate:', newCandidate); // Vérification de l'ajout du candidat
             state.list.push(newCandidate);
         },
+
+        selectCandidate: (state, action) => {
+            state.selectedCandidateId = action.payload; // ID du candidat sélectionné
+        },
     },
   });
   
