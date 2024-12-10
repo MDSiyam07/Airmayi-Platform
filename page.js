@@ -1,29 +1,22 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { Button } from 'antd';
-import { UserOutlined, TeamOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 
-export default function Home() {
+const ThankYouPage = () => {
     return (
-        <><Header />
-            <div className="home-container">
-                <h1 className="header-title">Qui êtes-vous ?</h1>
-                <div className="button-group">
-                    <Link href="/candidate">
-                        <Button className="custom-button type--A" shape="round" icon={<UserOutlined />} size="large">
-                            <span className='button__text'>Je suis candidat</span>
-                            <div class="button__drow1"></div>
-                        </Button>
-                    </Link>
-                    <Link href="/recruiter">
-                        <Button className="custom-button type--A" shape="round" icon={<TeamOutlined />} size="large">
-                            <span className='button__text'>Je suis recruteur</span>
-                            <div class="button__drow1"></div>
-                        </Button>
-                    </Link>
-                </div>
-            </div>
-        <Footer /></>
-    )
-}
+        <div style={{ display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                    margin: 0,
+                    textAlign: 'center',
+                    flexDirection: 'column', 
+                }}>
+            <h1>Merci pour votre candidature !</h1>
+            <p>Nous avons bien reçu vos informations. Nous vous contacterons bientôt. &#128522;</p>
+            <Link href="/">
+                <p style={{ color: 'blue', textDecoration: 'underline' }}>Retour à l'accueil</p>
+            </Link>
+        </div>
+    );
+};
+
+export default ThankYouPage;
