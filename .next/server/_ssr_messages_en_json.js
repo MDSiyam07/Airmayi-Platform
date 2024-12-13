@@ -17,7 +17,7 @@ exports.modules = {
   \**************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"recruiter":{"access_message":"Access to the candidate form","select_button":"Select a candidate to view their information","submit_sentence":"Please submit an application via the candidate form to see the list","title_listpage":"List of candidates"},"home":{"candidate_button":"I am a candidate","header":"Who are you","links":{"candidate":"Candidate","recruiter":"Recruiter","thanks":"Thanks"},"recruiter_button":"I am a recruiter"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"candidate":{"dragger":"Drag","dragger_space":"Click or drag a file into this area to upload it","email":"E-mail","firstname":"First name","gender":"Gender","name":"Name","phone":"Phone number","text_area":"Motivational text"},"recruiter":{"access_message":"Access to the candidate form","select_button":"Select a candidate to view their information","submit_sentence":"Please submit an application via the candidate form to see the list","title_listpage":"List of candidates"},"home":{"candidate_button":"I am a candidate","header":"Who are you","links":{"candidate":"Candidate","recruiter":"Recruiter","thanks":"Thanks"},"recruiter_button":"I am a recruiter"}}');
 
 /***/ })
 

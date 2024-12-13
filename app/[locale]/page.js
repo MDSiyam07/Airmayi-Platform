@@ -16,13 +16,13 @@ export default function Home() {
                     <Link href="/candidate">
                         <Button className="custom-button type--A" shape="round" icon={<UserOutlined />} size="large">
                             <span className='button__text'>{t('candidate_button')}</span>
-                            <div class="button__drow1"></div>
+                            <div className="button__drow1"></div>
                         </Button>
                     </Link>
                     <Link href="/recruiter">
                         <Button className="custom-button type--A" shape="round" icon={<TeamOutlined />} size="large">
                             <span className='button__text'>{t('recruiter_button')}</span>
-                            <div class="button__drow1"></div>
+                            <div className="button__drow1"></div>
                         </Button>
                     </Link>
                 </div>

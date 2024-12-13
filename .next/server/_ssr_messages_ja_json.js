@@ -17,7 +17,7 @@ exports.modules = {
   \**************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"recruiter":{"access_message":"候補者フォームへのアクセス","select_button":"候補者を選択してその情報を表示します","submit_sentence":"リストを表示するには、候補者フォームから応募を送信してください","title_listpage":"候補者一覧"},"home":{"candidate_button":"私は候補者です","header":"あなたは誰ですか","links":{"candidate":"候補者","recruiter":"採用担当者","thanks":"ありがとう"},"recruiter_button":"私は採用担当者です"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"candidate":{"dragger":"ドラッガー","dragger_space":"ファイルをクリックまたはこの領域にドラッグしてアップロードします","email":"電子メール","firstname":"ファーストネーム","gender":"性別","name":"名前","phone":"電話番号","text_area":"動機付けのテキスト"},"recruiter":{"access_message":"候補者フォームへのアクセス","select_button":"候補者を選択してその情報を表示します","submit_sentence":"リストを表示するには、候補者フォームから応募を送信してください","title_listpage":"候補者一覧"},"home":{"candidate_button":"私は候補者です","header":"あなたは誰ですか","links":{"candidate":"候補者","recruiter":"採用担当者","thanks":"ありがとう"},"recruiter_button":"私は採用担当者です"}}');
 
 /***/ })
 

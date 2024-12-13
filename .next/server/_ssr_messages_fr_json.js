@@ -17,7 +17,7 @@ exports.modules = {
   \**************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"recruiter":{"access_message":"Accès au formulaire candidat","select_button":"Sélectionnez un candidat pour voir ses informations","submit_sentence":"Veuillez soumettre une candidature via le formulaire candidat pour voir la liste","title_listpage":"Liste des candidats"},"home":{"candidate_button":"Je suis candidat","header":"Qui êtes vous","links":{"candidate":"Candidate","recruiter":"Recruiter","thanks":"Thanks"},"recruiter_button":"Je suis recruteur"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"candidate":{"dragger":"Dragger","dragger_space":"Cliquez ou faites glisser un fichier dans cette zone pour le téléverser","email":"Email","firstname":"First name","gender":"Gender","name":"Name","phone":"N° tél","text_area":"Texte de motivation"},"recruiter":{"access_message":"Accès au formulaire candidat","select_button":"Sélectionnez un candidat pour voir ses informations","submit_sentence":"Veuillez soumettre une candidature via le formulaire candidat pour voir la liste","title_listpage":"Liste des candidats"},"home":{"candidate_button":"Je suis candidat","header":"Qui êtes vous","links":{"candidate":"Candidate","recruiter":"Recruiter","thanks":"Thanks"},"recruiter_button":"Je suis recruteur"}}');
 
 /***/ })
 

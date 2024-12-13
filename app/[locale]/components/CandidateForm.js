@@ -170,13 +170,13 @@ const CandidateForm = () => {
                     <p className="ant-upload-drag-icon">
                         <InboxOutlined />
                     </p>
-                    <p className="ant-upload-text">Cliquez ou faites glisser un fichier dans cette zone pour le téléverser.</p>
+                    <p className="ant-upload-text">{t('dragger_space')}</p>
                     </Upload.Dragger>
                 </Form.Item>
             </Form.Item>
 
             <Form.Item
-                label="Texte de Motivation"
+                label={t('text_area')}
                 name="TextArea"
                 rules={[
                 {
