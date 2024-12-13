@@ -9,6 +9,7 @@ import { InboxOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 import { addCandidate } from '@/redux/store';
+import {useTranslations} from 'next-intl';
 
 const { Option } = Select;
 
@@ -21,6 +22,7 @@ const normFile = (e) => {
 };
 
 const CandidateForm = () => {
+    const t = useTranslations('candidate');
     const prefixSelector = (
         <Form.Item name="prefix" noStyle>
           <Select
@@ -83,7 +85,7 @@ const CandidateForm = () => {
             >
             
             <Form.Item
-                label="Prénom"
+                label={t('firstname')}
                 name="Input"
                 rules={[
                 {
@@ -96,7 +98,7 @@ const CandidateForm = () => {
             </Form.Item>
 
             <Form.Item
-                label="Nom"
+                label={t('name')}
                 name="name"
                 rules={[
                 {
@@ -109,7 +111,7 @@ const CandidateForm = () => {
             </Form.Item>
 
             <Form.Item
-                label="Genre"
+                label={t('gender')}
                 name="gender"
                 rules={[
                 {
